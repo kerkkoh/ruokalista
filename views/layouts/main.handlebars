@@ -1,0 +1,73 @@
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+  <meta content="Lista näyttää tietoa Joensuun koulujen ruokalistalta" name="Description">
+  
+  <meta name="theme-color" content="#c61525">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Ruokalista">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Ruokalista">
+  
+  <meta name="msapplication-TileImage" content="https://cdn.gomix.com/6b8c7a0a-ceaa-4e10-af74-ad4cad142658%2F144.png">
+  <meta name="msapplication-TileColor" content="#c61525">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <title>Ruokalista</title>
+  
+  <link rel="manifest" href="/manifest.json">
+  
+  <link rel="apple-touch-startup-image" href="https://cdn.gomix.com/6b8c7a0a-ceaa-4e10-af74-ad4cad142658%2Flaunch.png">
+  <link rel="apple-touch-icon" href="https://cdn.gomix.com/6b8c7a0a-ceaa-4e10-af74-ad4cad142658%2Fi48.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.gomix.com/6b8c7a0a-ceaa-4e10-af74-ad4cad142658%2Fi72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="https://cdn.gomix.com/6b8c7a0a-ceaa-4e10-af74-ad4cad142658%2Fi96w.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.gomix.com/6b8c7a0a-ceaa-4e10-af74-ad4cad142658%2Fi144.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="https://cdn.gomix.com/6b8c7a0a-ceaa-4e10-af74-ad4cad142658%2Fi192.png">
+  
+  <link id="favicon" rel="icon" href="https://cdn.hyperdev.com/6b8c7a0a-ceaa-4e10-af74-ad4cad142658%2Fic_local_dining_black_48dp_1x.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <style>.navbar-brand-white,:active,:hover,:visited,a:link{color:#eee !important}body{background:url(https://cdn.glitch.com/6b8c7a0a-ceaa-4e10-af74-ad4cad142658%2F6b8c7a0a-ceaa-4e10-af74-ad4cad142658%252Fbgjpg1.jpg?1490043470521) center center no-repeat fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;color:#eee;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}::selection{background:#C61525}::-moz-selection{background:#C61525}.navbar-red{background-image:-webkit-linear-gradient(top, #C61525 0, #D01625 100%);background-image:-o-linear-gradient(top, #C61525 0, #D01625 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#C61525), to(#D01625));background-image:linear-gradient(to bottom, #C61525 0, #D01625 100%)}.navbar-border{border-radius:0 0 4px 4px}.navbar-brand-white{font-weight:400;font-size:24}h1,h2,h3{font-weight:300 !important}.navbar-noborder{box-shadow:none !important;-webkit-box-shadow:none !important;border:0}.navbar-toggle,.navbar-toggle:hover,:focus{border-color:transparent !important}.navbar-toggle:hover,:focus{background:0 0 !important}#cb:focus,.ins:focus{background:#eee !important}.icon-bar{background-color:#eee !important}.ins:focus{-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 255, 255, .6) !important;box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 255, 255, .6) !important}#footer,#header,#tanaan{background:#BD1422}#main{border-radius:4px;text-align:center;margin:0 0 15px !important}h1,h2{margin:5px 0}h3{margin:10px 0 5px}.day{padding-top:20px;padding-bottom:20px}#header{border-top-left-radius:inherit;border-top-right-radius:inherit}#footer{padding:5px;border-bottom-left-radius:inherit;border-bottom-right-radius:inherit}p.reverse{unicode-bidi:bidi-override;direction:rtl}</style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-red navbar-noborder navbar-border">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand navbar-brand-white" href="#">Ruokalista</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-noborder" id="bs-example-navbar-collapse-1">
+        {{#if showCombobox}}
+          <form class="navbar-form navbar-right navbar-noborder">
+            <div class="form-group">
+              <select class="form-control" id="cb" onchange="cbChanged();">
+                  <option value="koulut">Koulut</option>
+                  <option value="pvkoti">Päiväkoti</option>
+              </select>
+            </div>
+          </form>
+        {{else}}
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Takaisin</a></li>
+          </ul>
+        {{/if}}
+      </div>
+    </div>
+  </nav>
+  
+  {{{body}}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/c/client.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

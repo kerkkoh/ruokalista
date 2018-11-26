@@ -1,0 +1,26 @@
+{
+  "name": "ruokalista",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.0.0-alpha.2",
+    "moment": "^2.17.1",
+    "express-force-https": "^1.0.0",
+    "express-handlebars": "^3.0.0"
+  },
+  "engines": {
+    "node": "4.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ruokalista.glitch.com"
+  },
+  "keywords": [
+    "node"
+  ],
+  "license": "All rights reserved"
+}

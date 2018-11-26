@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Ruokalista API Documentation</title>
+    <style>
+      li {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Simple API for fetching some relevant information from this site.
+    </p>
+
+    <h4>
+      SIMPLE QUERY
+    </h4>
+
+    <ul>
+      <li>Query endpoint<br><pre>ruokalista.glitch.me (https)</pre></li>
+      <li>Method<br><pre>GET</pre></li>
+      <li>URL<br><pre>/api</pre></li>
+      <li>URL Params<br><br>
+        <ol>
+          <li>id - (INTEGER) - This is the number which gets incremented to the current day, eq. id=0 would be the present day and id=-1 would be the day before the present day.</li>
+          <li>q - (STRING) - This is either <i>koulut</i> or <i>pvkoti</i></li>
+        </ol>
+      </li>
+      <li><b>Note:</b> This is <b>not</b> accurate with holidays and hence the use should be avoided during the time.</li>
+      <li>Sample query:<br>
+      <pre>
+https://ruokalista.glitch.me/api?id=0&q=koulut</pre>or<br>
+      <pre>
+$.ajax({
+  url: "/users/1",
+  dataType: "json",
+  type : "GET",
+  success : function(r) {
+    console.log(r);
+  }
+});
+      </pre></li>
+      <li>Sample Response:<br><br><pre>{"food":"Lohikiusaus / Kasvispyörykkä","day":5,"dayStr":"Perjantai","week":3}</pre></li>
+    </ul>
+    <a href="/info">Back</a>
+  </body>
+</html>
